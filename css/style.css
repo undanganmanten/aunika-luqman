@@ -895,6 +895,144 @@ input[type="radio"] {
   font-size: 16px
 }
 
+.amplop{
+  width: 100vw;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.amplop-title{
+  font-family: 'christ' !important;
+  font-size: 50px !important;
+  color: #fcc883;
+  font-weight: lighter;
+  letter-spacing: 4px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.amplop-text{
+  color: #fcc883;
+  font-family: 'Playfair Display', serif;
+  font-weight: lighter;
+  font-size: 17px;
+  text-align: center;
+  padding: 0px 30px;
+  margin-bottom: 20px;
+}
+
+.trigger,.btn-rek{
+  text-align: center;
+  padding: 7px 13px;
+  background: transparent;
+  color: #fcc883;
+  font-size: 15px;
+  outline: none;
+  border: solid 1px #fcc883;
+  border-radius: 5px;
+  font-family: 'Playfair Display', serif;
+  font-weight: lighter;
+  font-size: 17px;
+}
+
+.btn-rek:hover{
+  color: #fcc883;
+  background: #454545;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 75%;
+  border-radius: 0.5rem;
+  z-index: 9999!important;
+}
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: rgb(44, 44, 44);
+}
+.close-button:hover {
+  background-color: darkgray;
+}
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.bank{
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+}
+
+.card-bank{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* background: transparent; */
+  background-color: transparent; /* For browsers that do not support gradients */
+  background-image: linear-gradient(white 10%, transparent 45%);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border: #fcc883 solid 1px;
+}
+
+.card-bank p{
+  margin-bottom: 15px;
+  color: #fcc883;
+  font-family: 'Playfair Display', serif;
+  font-weight: lighter;
+  font-size: 18px;
+  text-align: center;
+}
+
+.card-bank img{
+  width: 50%;
+}
+
+.line{
+  width: 85%;
+  display: block;
+  height: 3px;
+  background-color: #fcc883;
+  margin: 15px auto;
+}
+
 .wish-img{
   display: flex;
   justify-content: center;
@@ -971,7 +1109,7 @@ input[type="radio"] {
   text-align: center;
   font-family: 'westbury';
   color: #ffc73f;
-  font-size: 80px !important;
+  font-size: 75px !important;
   font-weight: lighter;
   margin-top: 20px;
 }

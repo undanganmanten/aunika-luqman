@@ -102,7 +102,7 @@ var firebaseConfig = {
   
     if(input_box.value.length != 0 && input_date.value.length != 0){
       // our boxes have data and we take database
-      var key = firebase.database().ref().child("comments").push().key;
+      var key = firebase.database().ref().child("aunika").push().key;
       var task = {
         ucapan: input_box.value,
         nama: input_date.value,
@@ -110,7 +110,7 @@ var firebaseConfig = {
       };
   
       var updates = {};
-      updates["/comments/" + key] = task;
+      updates["/aunika/" + key] = task;
       firebase.database().ref().update(updates);
       create_unfinished_task();
       swal("Pesan telah terkirim", "Silakan cek pesan anda di kolom yang sudah ada", "success");
@@ -125,7 +125,7 @@ function create_unfinished_task(){
     unfinished_task_container.innerHTML = "";
   
     task_array = [];
-    firebase.database().ref("comments").once('value', function(snapshot) {
+    firebase.database().ref("aunika").once('value', function(snapshot) {
       snapshot.forEach(function(childSnapshot) {
         var childKey = childSnapshot.key;
         var childData = childSnapshot.val();
@@ -163,3 +163,26 @@ function create_unfinished_task(){
     });
     
   }
+
+  function copyToClipboard(elementId) {
+
+    // Create an auxiliary hidden input
+    var aux = document.createElement("input");
+  
+    // Get the text from the element passed into the input
+    aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+  
+    // Append the aux input to the body
+    document.body.appendChild(aux);
+  
+    // Highlight the content
+    aux.select();
+  
+    // Execute the copy command
+    document.execCommand("copy");
+  
+    // Remove the input from the body
+    document.body.removeChild(aux);
+  
+  }
+  
