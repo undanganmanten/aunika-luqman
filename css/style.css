@@ -208,7 +208,7 @@ body{
   top: -100%;
   width: 100vw;
   height: 100vh;
-  background: url("../asset/image/sampul.jpg");
+  background: url("../asset/image/sampul-photo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -229,10 +229,14 @@ body{
   /* padding-top: 50px; */
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
+  position: relative;
+  bottom: -220px;
 }
 
 .title .nama-undangan{
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .title .nama-undangan h3{
@@ -245,14 +249,14 @@ body{
 }
 
 .title h3{
-  color: white;
+  color: #ffc73f;
   font-family: 'Playfair Display', serif;
   font-weight: lighter;
   font-size: 30px;
 }
 
 .title h4{
-  color: white;
+  color: #ffc73f;
   font-family: 'amalfi';
   font-size: 50px;
 }
@@ -1109,7 +1113,7 @@ input[type="radio"] {
 @media(max-width: 576px){
  
   #popup{
-    background: url("../asset/image/sampul.jpg");
+    background: url("../asset/image/sampul-photo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
